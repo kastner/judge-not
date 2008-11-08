@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  round_id: 1
+  judge_id: 1
+
+two:
+  round_id: 1
+  judge_id: 2

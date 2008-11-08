@@ -2,6 +2,12 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  include AuthenticatedSystem
+  
+  def admin_required
+    (logged_in? && current_judge.admin?) || access_denied
+  end
+  
   helper :all # include all helpers, all the time
 
   # See ActionController::RequestForgeryProtection for details

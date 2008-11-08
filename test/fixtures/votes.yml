@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ballot_id: one
+  canidate: dave
+  position: 1
+
+onea:
+  ballot_id: one
+  canidate_id: bob
+  position: 3
+
+xyz:
+  ballot_id: one
+  canidate_id: sally
+  position: 2
+
+onex:
+  ballot_id: two
+  canidate_id: dave
+  position: 1
+
+onea:
+  ballot_id: two
+  canidate_id: bob
+  position: 2
+
+sal1:
+  ballot_id: two
+  canidate_id: saly
+  position: 3
