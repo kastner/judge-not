@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+round_zero:
+  note: MyText
+  open: false
+
+round_one:
+  note: Go for it!
+  open: true

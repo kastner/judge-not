@@ -2,8 +2,8 @@
 
 one:
   round_id: 1
-  judge_id: 1
+  judge: quentin
 
 two:
   round_id: 1
-  judge_id: 2
+  judge: quentin

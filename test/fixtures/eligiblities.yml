@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+dave_round_one:
+  round: round_one
+  candidate: dave
+
+dave_round_zero:
+  round: round_zero
+  candidate: dave
+  
+bob_round_one:
+  round: round_one
+  candidate: bob

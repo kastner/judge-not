@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.signup    '/signup', :controller => 'judges', :action => 'new'
 
   map.resource :session, :vote
-  map.resources :judges, :canidates
+  map.resources :judges, :candidates
   
   # map.root :controller => "welcome"
   # map.connect ':controller/:action/:id'
