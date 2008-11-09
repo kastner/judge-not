@@ -17,7 +17,6 @@ h1 {
   margin-bottom: 1.3em;
   letter-spacing: 0.3em;
   line-height: 1.3em;
-
 }
 
 h2 {
@@ -32,7 +31,7 @@ form div {
   margin-bottom: 1em;
   clear: left;
   width: 340px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 form div.check-box {
@@ -43,11 +42,15 @@ form div label {
   float: left;  
 }
 
-form div input {
+form div input, form div textarea {
   font-size: 1.143em; /* 16.0px at 14px base */
 }
 
-form div input[type="text"], form div input[type="password"] {
+form div textarea {
+  height: 100px;
+}
+
+form div input[type="text"], form div input[type="password"], form div textarea {
   width: 220px;
   float: right;
 }

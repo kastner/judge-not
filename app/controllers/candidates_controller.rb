@@ -19,8 +19,19 @@ class CandidatesController < ApplicationController
   def create
     @candidate = Candidate.new(params[:candidate])
     if @candidate.save
-      flash[:notice] = "Candidate saved"
-      redirect_to new_candidate_url
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Candidate saved"
+          redirect_to new_candidate_url
+        end
+        format.js do
+          render :text => <<-JS
+            $("#new_candidate input[type='text'], #new_candidate textarea").val('');
+            $('<p>Added #{@candidate.name}</p>').appendTo('#message').fadeTo(1000,1).fadeOut('slow');
+            $("#new_candidate input[type='text']:first").focus();
+          JS
+        end
+      end
     else
       render :action => :new
     end

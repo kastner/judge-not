@@ -1,7 +1,7 @@
 class CreateJudges < ActiveRecord::Migration
   def self.up
     create_table "judges", :force => true do |t|
-      t.column :login,                     :string, :limit => 40
+      t.column :username,                  :string, :limit => 40
       t.column :name,                      :string, :limit => 100, :default => '', :null => true
       t.column :email,                     :string, :limit => 100
       t.column :crypted_password,          :string, :limit => 40
@@ -13,7 +13,7 @@ class CreateJudges < ActiveRecord::Migration
       t.boolean :admin, :default => false
 
     end
-    add_index :judges, :login, :unique => true
+    add_index :judges, :username, :unique => true
   end
 
   def self.down
