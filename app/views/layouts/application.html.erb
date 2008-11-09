@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Mitchell Scholarship Rankings</title>
+  <%= stylesheet_link_tag "reset" %>
+  <%= stylesheet_link_tag "application" %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body id="main">
+  <div id="page">
+    <div id="header">
+      <h2>Mitchel Scholarship Rankings</h2>
+      <%= render :partial => "judges/judge_bar" %>
+    </div>
+    
+    <div id="content">
+      <% if flash[:notice] -%>
+      <div class="flash notice">
+        <%= flash[:notice] %>
+      </div>
+      <% end -%>
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

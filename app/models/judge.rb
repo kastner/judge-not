@@ -4,6 +4,12 @@ class Judge < ActiveRecord::Base
   has_many :votes
   has_many :ballots
   
+  before_create :make_first_judge_an_admin
+  
+  def make_first_judge_an_admin
+    admin = true if Judge.count == 0
+  end
+  
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken

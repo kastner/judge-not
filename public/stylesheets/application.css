@@ -1,0 +1,57 @@
+body {
+/*  font-family: "Helvetica Neue", helvetica, arial, sans-serif;*/
+  font-family: Baskerville, Times New Roman, Times, serif;
+  font-size: medium;
+  color: #444;
+  padding: 2em;
+}
+
+#page {
+  font-size: 87.5%; /* 14.0px at 16px base */
+  line-height: 1.3em;
+}
+
+h1 {
+  font-family: "Trebuchet MS", trebuchet, sans-serif;
+  font-size: 1.714em; /* 24.0px at 14px base */
+  margin-bottom: 1.3em;
+  letter-spacing: 0.3em;
+  line-height: 1.3em;
+
+}
+
+h2 {
+  font-family: "Big Caslon";
+  font-size: 3.571em; /* 50.0px at 14px base */
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5em;
+  line-height: 1.3em;
+}
+
+form div {
+  margin-bottom: 1em;
+  clear: left;
+  width: 340px;
+  overflow: auto;
+}
+
+form div.check-box {
+  text-align: right;
+}
+
+form div label {
+  float: left;  
+}
+
+form div input {
+  font-size: 1.143em; /* 16.0px at 14px base */
+}
+
+form div input[type="text"], form div input[type="password"] {
+  width: 220px;
+  float: right;
+}
+
+form div input[type="submit"] {
+  float: right;
+}

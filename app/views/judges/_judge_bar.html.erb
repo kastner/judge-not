@@ -1,6 +1,7 @@
 <% if logged_in? -%>
   <div id="judge-bar-greeting">Logged in as <%= link_to_current_judge :content_method => :login %></div>
   <div id="judge-bar-action"  >(<%= link_to "Log out", logout_path, { :title => "Log out" }    %>)</div>
+  <%= current_judge.admin %>
 <% else -%>
   <div id="judge-bar-greeting"><%= link_to_login_with_IP 'Not logged in', :style => 'border: none;' %></div>
   <div id="judge-bar-action"  ><%= link_to "Log in",  login_path,  { :title => "Log in" } %> /

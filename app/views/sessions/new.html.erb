@@ -1,16 +1,22 @@
-<h1>Log In</h1>
+<h1>Judge's Sign in</h1>
 
 <% form_tag session_path do -%>
-<p><%= label_tag 'login' %><br />
-<%= text_field_tag 'login', @login %></p>
+<div>
+  <%= label_tag :login %>
+  <%= text_field_tag :login %>
+</div>
 
-<p><%= label_tag 'password' %><br/>
-<%= password_field_tag 'password', nil %></p>
+<div>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+</div>
 
-<!-- Uncomment this if you want this functionality
-<p><%= label_tag 'remember_me', 'Remember me' %>
-<%= check_box_tag 'remember_me', '1', @remember_me %></p>
--->
+<div class="check-box">
+  <%= label_tag :remember_me, "Stay logged in" %>
+  <%= check_box_tag :remember_me, 1, @remember_me %>
+</div>
 
-<p><%= submit_tag 'Log in' %></p>
+<div>
+  <%= submit_tag "Log In" %>
+</div>
 <% end -%>

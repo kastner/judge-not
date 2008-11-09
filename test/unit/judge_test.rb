@@ -94,6 +94,20 @@ class JudgeTest < ActiveSupport::TestCase
     assert judges(:quentin).remember_token_expires_at.between?(before, after)
   end
 
+  describe "The Judges" do
+    # before do
+    #   # clear out existing
+    #   Judge.destroy_all
+    #   create_judge
+    #   create_judge({:login => "bob", :email => "bob2@2.com"})
+    # end
+
+    # DOESN'T WORK. :(
+    # it "should have an admin user" do
+    #   Judge.find(:all, :conditions => {:admin => true}).size.should be(1)
+    # end
+  end
+  
 protected
   def create_judge(options = {})
     record = Judge.new({ :login => 'quire', :email => 'quire@example.com', :password => 'quire69', :password_confirmation => 'quire69' }.merge(options))

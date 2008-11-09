@@ -7,7 +7,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session, :vote
   map.resources :judges, :candidates
   
-  # map.root :controller => "welcome"
-  # map.connect ':controller/:action/:id'
-  # map.connect ':controller/:action/:id.:format'
+  map.root :controller => "votes"
 end
