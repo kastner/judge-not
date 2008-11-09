@@ -7,7 +7,10 @@ class Judge < ActiveRecord::Base
   before_create :make_first_judge_an_admin
   
   def make_first_judge_an_admin
-    admin = true if Judge.count == 0
+    # admin = true if Judge.count == 0
+    if Judge.count == 0
+      self.admin = true
+    end
   end
   
   include Authentication
