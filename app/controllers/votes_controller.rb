@@ -5,6 +5,8 @@ class VotesController < ApplicationController
   end
 
   def show
+    @round = Round.open
+    @candidates = (@round) ? @round.candidates : []
   end
 
   def edit

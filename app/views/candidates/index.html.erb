@@ -1,3 +1,6 @@
+<% if current_judge.admin? %>
+
+<% end %>
 <ul id="candidates">
   <% @candidates.each do |candidate| %>
   <li><%= link_to candidate.name, candidate %></li>

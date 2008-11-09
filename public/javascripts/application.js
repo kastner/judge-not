@@ -15,4 +15,6 @@ $(function() {
     }, 'script');
     return false;
   });  
+  
+  $("#order-candidates").sortable();
 });

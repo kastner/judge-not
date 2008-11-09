@@ -1,2 +1,19 @@
-<h1>Votes#show</h1>
-<p>Find me in app/views/votes/show.html.erb</p>
+<h1>Order the list of Candidates</h1>
+
+<% if !@round -%>
+<h3>No open voting rounds. Please check back later</h3>
+<% else %>
+<h3>Round <%= @round.id %></h3>
+<% end %>
+
+<% if @round && !@candidates %>
+<h3>No candidates are active in this round. Please check back later</h3>
+<% end %>
+
+<ul id="order-candidates">
+  <% @candidates.each do |candidate| %>
+  <li>
+    <%= candidate.name %>
+  </li>
+  <% end %>  
+</ul>
