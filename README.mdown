@@ -2,3 +2,15 @@ Judge Not
 =========
 
 A simple demonstration app for churning through and judging applicants.
+
+
+USAGE
+-----
+
+After rake db:migrate, you can visit /signup. The first user becomes an admin
+Then add candidates by visiting /candidates/new
+
+After that. Have your judges sign up by visiting /signup, and subsequently voting by visiting /vote
+
+FOR NOW, you must create the rounds by hand:
+script/runner 'Round.create(:open => true)'
