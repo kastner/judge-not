@@ -3,7 +3,8 @@ body {
   font-family: Baskerville, Times New Roman, Times, serif;
   font-size: medium;
   color: #444;
-  padding: 2em;
+  padding: 2em 5em;
+  border-top: 12px solid #539343;
 }
 
 #page {
@@ -12,10 +13,11 @@ body {
 }
 
 h1 {
-  font-family: "Trebuchet MS", trebuchet, sans-serif;
+/*  font-family: "Trebuchet MS", trebuchet, sans-serif;*/
+  font-family: "Big Caslon";
   font-size: 1.714em; /* 24.0px at 14px base */
   margin-bottom: 1.3em;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   line-height: 1.3em;
 }
 
@@ -57,4 +59,14 @@ form div input[type="text"], form div input[type="password"], form div textarea 
 
 form div input[type="submit"] {
   float: right;
+}
+
+#order-candidates li {
+  border-bottom: 1px dotted #333;
+  padding: 1em;
+  width: 300px;
+}
+
+#order-candidates li:hover {
+  cursor: move;
 }

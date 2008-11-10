@@ -1,31 +1,44 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+dave_on_ballot_one:
   ballot: one
   candidate: dave
+  round: round_zero
   position: 1
 
-onea:
+bob_on_ballot_one:
   ballot: one
   candidate: bob
+  round: round_zero
   position: 3
 
-xyz:
+sally_on_ballot_one:
   ballot: one
   candidate: sally
+  round: round_zero
   position: 2
 
-onex:
+dave_on_ballot_two:
   ballot: two
   candidate: dave
+  round: round_zero
   position: 1
 
-onea:
+bob_on_ballot_two:
   ballot: two
   candidate: bob
-  position: 2
+  round: round_zero
+  position: 3
 
-sal1:
+sally_on_ballot_two:
   ballot: two
   candidate: sally
-  position: 3
+  round: round_zero
+  position: 2
+
+sally_on_ballot_three:
+  ballot: three
+  candidate: sally
+  round: round_one
+  position: 1
+  

@@ -13,10 +13,10 @@ class JudgeTest < ActiveSupport::TestCase
     end
   end
 
-  def test_should_require_login
+  def test_should_require_username
     assert_no_difference 'Judge.count' do
-      u = create_judge(:login => nil)
-      assert u.errors.on(:login)
+      u = create_judge(:username => nil)
+      assert u.errors.on(:username)
     end
   end
 
@@ -47,7 +47,7 @@ class JudgeTest < ActiveSupport::TestCase
   end
 
   def test_should_not_rehash_password
-    judges(:quentin).update_attributes(:login => 'quentin2')
+    judges(:quentin).update_attributes(:username => 'quentin2')
     assert_equal judges(:quentin), Judge.authenticate('quentin2', 'monkey')
   end
 
@@ -94,12 +94,35 @@ class JudgeTest < ActiveSupport::TestCase
     assert judges(:quentin).remember_token_expires_at.between?(before, after)
   end
 
+  describe "A judge with an existing ballot" do
+    before do
+      @judge = judges(:quentin)
+    end
+    
+    it "should not create a ballot if one exists" do
+      assert_no_difference 'Ballot.count' do
+        @judge.ballot_for_round(rounds(:round_zero))
+      end
+    end
+    
+    it "should return the ballot if it's already there" do
+      @judge.ballots.should include(@judge.ballot_for_round(rounds(:round_zero)))
+    end
+
+    it "should create a ballot if they don't have one supplied round" do
+      assert_difference 'Ballot.count' do
+        @judge.ballot_for_round(rounds(:round_one))
+      end
+    end    
+  end
+  
+  
   describe "The Judges" do
     # before do
     #   # clear out existing
     #   Judge.destroy_all
     #   create_judge
-    #   create_judge({:login => "bob", :email => "bob2@2.com"})
+    #   create_judge({:username => "bob", :email => "bob2@2.com"})
     # end
 
     # DOESN'T WORK. :(
@@ -110,7 +133,7 @@ class JudgeTest < ActiveSupport::TestCase
   
 protected
   def create_judge(options = {})
-    record = Judge.new({ :login => 'quire', :email => 'quire@example.com', :password => 'quire69', :password_confirmation => 'quire69' }.merge(options))
+    record = Judge.new({ :username => 'quire', :email => 'quire@example.com', :password => 'quire69', :password_confirmation => 'quire69' }.merge(options))
     record.save
     record
   end

@@ -4,7 +4,7 @@ require 'test_help'
 
 class Test::Unit::TestCase
   self.use_transactional_fixtures = true
-  # self.use_transactional_fixtures = false
+  self.use_transactional_fixtures = false
   self.use_instantiated_fixtures  = false
 
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.

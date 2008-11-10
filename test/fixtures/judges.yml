@@ -1,5 +1,5 @@
 quentin:
-  login:                     quentin
+  username:                  quentin
   email:                     quentin@example.com
   salt:                      356a192b7913b04c54574d18c28d46e6395428ab # SHA1('0')
   crypted_password:          1eecf8876205f49312fbaf7459918e0f745e2f3b # 'monkey'
@@ -8,7 +8,7 @@ quentin:
   remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
       
 aaron:
-  login:                     aaron
+  username:                  aaron
   email:                     aaron@example.com
   salt:                      da4b9237bacccdf19c0760cab7aec4a8359010b0 # SHA1('1')
   crypted_password:          84c5107d4c78c3c400a74683083d849c8a009b78 # 'monkey'
@@ -16,9 +16,8 @@ aaron:
   remember_token_expires_at: 
   remember_token:            
 
-
 old_password_holder:
-  login:                     old_password_holder
+  username:                  old_password_holder
   email:                     salty_dog@example.com
   salt:                      7e3041ebc2fc05a40c60028e2c4901a81035d3cd
   crypted_password:          00742970dc9e6319f8019fd54864d3ea740f04b1 # test

@@ -18,10 +18,10 @@ class JudgesControllerTest < ActionController::TestCase
     end
   end
 
-  def test_should_require_login_on_signup
+  def test_should_require_username_on_signup
     assert_no_difference 'Judge.count' do
-      create_judge(:login => nil)
-      assert assigns(:judge).errors.on(:login)
+      create_judge(:username => nil)
+      assert assigns(:judge).errors.on(:username)
       assert_response :success
     end
   end
@@ -49,13 +49,10 @@ class JudgesControllerTest < ActionController::TestCase
       assert_response :success
     end
   end
-  
-
-  
 
   protected
     def create_judge(options = {})
-      post :create, :judge => { :login => 'quire', :email => 'quire@example.com',
+      post :create, :judge => { :username => 'quire', :email => 'quire@example.com',
         :password => 'quire69', :password_confirmation => 'quire69' }.merge(options)
     end
 end

@@ -3,17 +3,18 @@
 <% if !@round -%>
 <h3>No open voting rounds. Please check back later</h3>
 <% else %>
-<h3>Round <%= @round.id %></h3>
 <% end %>
 
 <% if @round && !@candidates %>
 <h3>No candidates are active in this round. Please check back later</h3>
 <% end %>
 
+<button id="submit-candidate-votes" title="<%= vote_url %>"/>Submit this Ballot</button>
+
 <ul id="order-candidates">
   <% @candidates.each do |candidate| %>
-  <li>
+  <li id="candidate-<%= candidate.id %>">
     <%= candidate.name %>
   </li>
-  <% end %>  
+  <% end %>
 </ul>

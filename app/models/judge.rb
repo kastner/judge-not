@@ -3,7 +3,7 @@ require 'digest/sha1'
 class Judge < ActiveRecord::Base
   has_many :votes
   has_many :ballots
-  
+    
   before_create :make_first_judge_an_admin
   
   def make_first_judge_an_admin
@@ -11,6 +11,11 @@ class Judge < ActiveRecord::Base
     if Judge.count == 0
       self.admin = true
     end
+  end
+  
+  def ballot_for_round(round)
+    ballots.find(:first, :conditions => { :round_id => round.id } ) ||
+    ballots.create(:round_id => round.id)
   end
   
   include Authentication

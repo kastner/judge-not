@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class VoteTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  describe "votes" do
+    it "should have 3 votes on the first ballot" do
+      ballots(:one).votes.size.should == 3
+    end
   end
 end

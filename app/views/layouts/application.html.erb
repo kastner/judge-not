@@ -13,7 +13,7 @@
 <body id="main">
   <div id="page">
     <div id="header">
-      <h2>Mitchel Scholarship Rankings</h2>
+      <h2>Mitchell Scholarship Rankings</h2>
       <%#= render :partial => "judges/judge_bar" %>
     </div>
     
@@ -23,8 +23,13 @@
         <%= flash[:notice] %>
       </div>
       <% end -%>
+      <div id="message-center"></div>
       <%= yield %>
     </div>
   </div>
+  
+  <script type="text/javascript" charset="utf-8">
+    var token = <%= form_authenticity_token.inspect %>;
+  </script>
 </body>
 </html>
