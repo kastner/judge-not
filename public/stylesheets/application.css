@@ -16,8 +16,9 @@ h1 {
 /*  font-family: "Trebuchet MS", trebuchet, sans-serif;*/
   font-family: "Big Caslon";
   font-size: 1.714em; /* 24.0px at 14px base */
+  font-size: 2.000em; /* 28.0px at 14px base */
   margin-bottom: 1.3em;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.05em;
   line-height: 1.3em;
 }
 
@@ -27,6 +28,7 @@ h2 {
   letter-spacing: -0.03em;
   margin-bottom: 0.5em;
   line-height: 1.3em;
+/*  font-variant: small-caps;*/
 }
 
 form div {
@@ -61,10 +63,18 @@ form div input[type="submit"] {
   float: right;
 }
 
+#order-candidates {
+  background: #eee;
+  width: 300px;
+  margin-top: 0.5em;
+  overflow: auto;
+}
+
 #order-candidates li {
   border-bottom: 1px dotted #333;
-  padding: 1em;
-  width: 300px;
+  padding: 0.75em;
+  margin: 0.5em;
+  font-size: 1.286em; /* 18.0px at 14px base */
 }
 
 #order-candidates li:hover {
